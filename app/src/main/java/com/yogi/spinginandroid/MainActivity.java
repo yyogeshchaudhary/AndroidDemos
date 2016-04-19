@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
             greetingIdText.setText(greeting.getId());
             greetingContentText.setText(greeting.getContent());
         }
-
     }
 
 }
