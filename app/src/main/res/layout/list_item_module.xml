@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="4dp"
-    android:background="#929292">
+    android:layout_margin="4dp">
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"/>
+        android:layout_margin="4dp"
+        android:background="#929292"/>
 
 </android.support.v7.widget.CardView>
