@@ -7,36 +7,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin">
 
-    <TextView
-        android:id="@+id/id_label"
-        android:text="Label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/content_label"
-        android:text="Content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/id_label"
-        android:layout_alignParentLeft="true" />
+    </FrameLayout>
 
-    <TextView
-        android:id="@+id/id_value"
-        android:text="label value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/id_label"
-        android:layout_marginLeft="50dp" />
-
-    <TextView
-        android:id="@+id/content_value"
-        android:text="Content Value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/content_label"
-        android:layout_alignLeft="@+id/id_value" />
-    @string/content_value
 </RelativeLayout>
