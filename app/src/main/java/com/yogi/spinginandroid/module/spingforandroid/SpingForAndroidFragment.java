@@ -1,16 +1,16 @@
-package com.yogi.spinginandroid;
+package com.yogi.spinginandroid.module.spingforandroid;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.TextViewCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.yogi.spinginandroid.DemoFragment;
+import com.yogi.spinginandroid.R;
 import com.yogi.spinginandroid.dao.WeatherInfo;
 
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
@@ -19,7 +19,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * Created by ril on 4/29/16.
  */
-public class SpingForAndroidFragment  extends Fragment{
+public class SpingForAndroidFragment  extends DemoFragment{
 
     private View mView;
 
