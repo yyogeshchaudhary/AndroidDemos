@@ -56,7 +56,6 @@ public class BarcodeFragment extends DemoFragment {
                             ImageBitmap.setPixel(i, j, bm.get(i, j) ? Color.BLACK: Color.WHITE);
                         }
                     }
-
                     if (ImageBitmap != null) {
                         image.setImageBitmap(ImageBitmap);
                     } else {
