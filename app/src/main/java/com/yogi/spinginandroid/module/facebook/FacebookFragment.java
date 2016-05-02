@@ -1,7 +1,10 @@
 package com.yogi.spinginandroid.module.facebook;
 
+import android.content.Intent;
+import android.content.pm.PackageInstaller;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +15,13 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.yogi.spinginandroid.DemoFragment;
 import com.yogi.spinginandroid.R;
+
+import java.util.Arrays;
 
 /**
  * Created by ril on 4/29/16.
@@ -41,23 +47,27 @@ public class FacebookFragment extends DemoFragment{
         loginButton.setFragment(this);
 
         callbackManager = CallbackManager.Factory.create();
-
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
+        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                AccessToken accessToken = loginResult.getAccessToken();
-                Toast.makeText(FacebookFragment.this.getActivity(), accessToken.getUserId()+" "+accessToken.getToken(), Toast.LENGTH_SHORT).show();
+                Log.d("Facebook",loginResult.toString());
             }
 
             @Override
             public void onCancel() {
-
+                Log.d("Facebook", "Cancel");
             }
 
             @Override
             public void onError(FacebookException error) {
-
+                Log.d("Facebook",error.toString());
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode,resultCode,data);
     }
 }
