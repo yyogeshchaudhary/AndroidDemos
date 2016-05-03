@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.yogi.spinginandroid.module.barcode.BarcodeFragment;
+import com.yogi.spinginandroid.module.cardgrid.ShoppingFragment;
 import com.yogi.spinginandroid.module.facebook.FacebookFragment;
 import com.yogi.spinginandroid.module.spingforandroid.SpingForAndroidFragment;
 
@@ -15,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private String[] modules = new String[]{
             "Spring for Android",
             "Barcode and scan",
-            "Facebook"
+            "Facebook",
+            "Shopping Cards"
     };
 
     @Override
@@ -48,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
             case 2:
                 openFragment(new FacebookFragment());
+                break;
+
+            case 3:
+                openFragment(new ShoppingFragment());
                 break;
         }
     }
