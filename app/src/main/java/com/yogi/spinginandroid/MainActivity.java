@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.yogi.spinginandroid.module.alpr.ALPRFragment;
 import com.yogi.spinginandroid.module.barcode.BarcodeFragment;
 import com.yogi.spinginandroid.module.cardgrid.ShoppingFragment;
 import com.yogi.spinginandroid.module.facebook.FacebookFragment;
@@ -19,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
             "Barcode and scan",
             "Facebook",
             "Shopping Cards",
-            "Realm"
+            "Realm",
+            "ALPR"
     };
 
     @Override
@@ -60,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
             case 4:
                 openFragment(new RealmFragment());
+                break;
+
+            case 5:
+                openFragment(new ALPRFragment());
                 break;
         }
     }
